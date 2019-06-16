@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="wizard_demo_form" model="ir.ui.view">
+        <field name="name">wizard.demo.form</field>
+        <field name="model">wizard.demo</field>
+        <field name="arch" type="xml">
+            <form string="Wizard Demo">
+                <sheet>
+                    <group>
+						<group>
+							<field name="params"/>
+						</group>
+						<group>
+						</group>
+                    </group>
+                </sheet>
+                <footer>
+                    <button string="Test" class="btn-warning btn-lg" name="button_test" type="object"/>
+                </footer>
+            </form>
+        </field>
+    </record>
+
+	<act_window id="action_wizard_demo" name="Demo" res_model="wizard.demo" target="new" view_id="wizard_demo_form"/>
+	<menuitem id="menu_wizard_demo" parent="demo.menu_root"
+	action="action_wizard_demo" sequence="22"/>
+</odoo>

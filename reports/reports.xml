@@ -1,0 +1,22 @@
+<odoo>
+  <data>
+		<record id="demo_report" model="ir.actions.report"> 
+			<field name="name">Demo Report</field> 
+			<field name="model">wizard.demo</field> 
+			<field name="string">Demo Report</field> 
+			<field name="report_type">jasper</field> 
+			<field name="file">demo/reports/demo.jrxml</field> 
+			<field name="attachment_use">False</field> 
+			<field name="report_name">demo_report</field> 
+			<field name="jasper_report">True</field> 
+			<field name="binding_type">report</field> 
+		</record> 
+
+		<record id="demo_report_id" model="ir.actions.report.xml.file"> 
+			<field name="default">True</field> 
+			<field name="filename">demo.jrxml</field> 
+			<field name="report_id" ref="demo.demo_report"/> 
+			<field name="file" type="base64" file="demo/reports/demo.jrxml"/> 
+		</record>
+  </data>
+</odoo>
